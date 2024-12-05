@@ -1,5 +1,3 @@
-Infelizmente, eu não consigo gerar um arquivo diretamente para download. No entanto, você pode copiar o conteúdo abaixo, salvá-lo em um arquivo chamado README.md no seu editor de texto preferido ou no diretório do seu projeto.
-
 # Teste Técnico - Microserviço de Compras
 
 Este projeto é uma implementação de um microserviço em **Spring Boot** para atender aos requisitos de um teste técnico. O microserviço consome dados de produtos e clientes/compra disponibilizados via mocks e expõe endpoints RESTful para fornecer informações relevantes.
