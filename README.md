@@ -76,7 +76,7 @@ Retorna os 3 clientes mais fiéis, com base na recorrência e valores de compras
   }
 ]
 ```
-### 4. **GET /recomendacao/{cliente}/{tipo}**
+### 4. **GET /recomendacao/{cpf}**
 
 Retorna uma recomendação de vinho baseada nos tipos mais comprados pelo cliente.
 Exemplo: /recomendacao/12345678900/tinto
