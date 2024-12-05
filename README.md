@@ -98,7 +98,7 @@ Retorna uma lista de compras ordenadas de forma crescente por valor total.
 ### 2. **GET /maior-compra/{ano}**
 
 Retorna os detalhes da maior compra de um ano específico.
-Exemplo: /maior-compra/2023
+Exemplo: /maior-compra/2020
 **Exemplo de Resposta:**
 ```json
 {
@@ -139,7 +139,7 @@ Retorna os 3 clientes mais fiéis, com base na recorrência e valores de compras
 ### 4. **GET /recomendacao/cliente/tipo/{cpf}**
 
 Retorna uma recomendação de vinho baseada nos tipos mais comprados pelo cliente.
-Exemplo: /recomendacao/12345678900/tinto
+Exemplo: /recomendacao/cliente/tipo/9671839134
 **Exemplo de Resposta:**
 ```json
 {
