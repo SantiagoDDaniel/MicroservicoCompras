@@ -5,11 +5,6 @@ Este projeto é uma implementação de um microserviço em **Spring Boot** para 
 ## Índice
 - [Descrição](#descrição)
 - [Endpoints Disponíveis](#endpoints-disponíveis)
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Como Executar](#como-executar)
-- [Estrutura do Projeto](#estrutura-do-projeto)
-- [Contato](#contato)
-
 ---
 
 ## Descrição
