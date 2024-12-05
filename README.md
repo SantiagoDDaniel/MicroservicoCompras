@@ -32,15 +32,66 @@ Retorna uma lista de compras ordenadas de forma crescente por valor total.
 ```json
 [
   {
-    "clienteNome": "João Silva",
-    "clienteCpf": "123.456.789-00",
-    "produto": {
-      "nome": "Vinho Tinto",
-      "tipo": "Tinto",
-      "preco": 50.0
-    },
+    "id": 24,
     "quantidade": 2,
-    "valorTotal": 100.0
+    "cliente": {
+      "nome": "Hadassa Daniela Sales",
+      "cpf": "1051252612",
+      "compras": [
+        {
+          "codigo": "19",
+          "quantidade": 3,
+          "tipoVinho": "Espumante",
+          "preco": 135.5,
+          "safra": "2019",
+          "anoCompra": 2020
+        },
+        {
+          "codigo": "17",
+          "quantidade": 3,
+          "tipoVinho": "Branco",
+          "preco": 125.25,
+          "safra": "2017",
+          "anoCompra": 2018
+        },
+        {
+          "codigo": "12",
+          "quantidade": 2,
+          "tipoVinho": "Branco",
+          "preco": 106.5,
+          "safra": "2018",
+          "anoCompra": 2019
+        }
+      ]
+    },
+    "valorTotal": 213
+  },
+  {
+    "id": 31,
+    "quantidade": 2,
+    "cliente": {
+      "nome": "Fabiana Melissa Nunes",
+      "cpf": "824643755772",
+      "compras": [
+        {
+          "codigo": "18",
+          "quantidade": 2,
+          "tipoVinho": "Rosé",
+          "preco": 120.99,
+          "safra": "2018",
+          "anoCompra": 2019
+        },
+        {
+          "codigo": "10",
+          "quantidade": 10,
+          "tipoVinho": "Chardonnay",
+          "preco": 130.75,
+          "safra": "2020",
+          "anoCompra": 2021
+        }
+      ]
+    },
+    "valorTotal": 241.98
   }
 ]
 ```
@@ -51,15 +102,12 @@ Exemplo: /maior-compra/2023
 **Exemplo de Resposta:**
 ```json
 {
-  "clienteNome": "Maria Souza",
-  "clienteCpf": "987.654.321-00",
-  "produto": {
-    "nome": "Espumante",
-    "tipo": "Branco",
-    "preco": 150.0
-  },
-  "quantidade": 3,
-  "valorTotal": 450.0
+  "nomeCliente": "Ian Joaquim Giovanni Santos",
+  "cpfCliente": "96718391344",
+  "tipoProduto": "Rosé",
+  "safraProduto": "2019",
+  "quantidade": 20,
+  "valorTotal": 2435
 }
 ```
 ### 3. **GET /clientes-fieis**
@@ -69,24 +117,35 @@ Retorna os 3 clientes mais fiéis, com base na recorrência e valores de compras
 ```json
 [
   {
-    "clienteNome": "Carlos Pereira",
-    "clienteCpf": "123.456.789-00",
-    "comprasTotais": 25,
-    "valorTotalGasto": 5000.0
+    "nomeCliente": "Andreia Emanuelly da Mata",
+    "cpfCliente": "27737287426",
+    "quantidadeDeCompras": 6,
+    "valorTotalGasto": 3210.19
+  },
+  {
+    "nomeCliente": "Ian Joaquim Giovanni Santos",
+    "cpfCliente": "96718391344",
+    "quantidadeDeCompras": 5,
+    "valorTotalGasto": 7631.69
+  },
+  {
+    "nomeCliente": "Geraldo Pedro Julio Nascimento",
+    "cpfCliente": "05870189179",
+    "quantidadeDeCompras": 5,
+    "valorTotalGasto": 3416.87
   }
 ]
 ```
-### 4. **GET /recomendacao/{cpf}**
+### 4. **GET /recomendacao/cliente/tipo/{cpf}**
 
 Retorna uma recomendação de vinho baseada nos tipos mais comprados pelo cliente.
 Exemplo: /recomendacao/12345678900/tinto
 **Exemplo de Resposta:**
 ```json
 {
-  "clienteNome": "Ana Lima",
-  "recomendacao": {
-    "nome": "Vinho Reserva Especial",
-    "tipo": "Tinto",
-    "preco": 80.0
-  }
+  "codigo": 17,
+  "tipoVinho": "Branco",
+  "preco": 125.25,
+  "safra": "2017"
+}
 ```
